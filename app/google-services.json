@@ -1,0 +1,47 @@
+{
+  "project_info": {
+    "project_number": "225169726524",
+    "project_id": "wildrunnig-54ea6",
+    "storage_bucket": "wildrunnig-54ea6.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:225169726524:android:7e5f6e12700219e5bb3739",
+        "android_client_info": {
+          "package_name": "com.example.wildrunning"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "225169726524-2rg39k030cp92ulf3gbdmq7cd7080kf8.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.example.wildrunning",
+            "certificate_hash": "88d3f10f8ff81fbcca2a3ba2bc22c3620b7f694e"
+          }
+        },
+        {
+          "client_id": "225169726524-8jh9toa4t4sonqkg09vql4kprs6kg47k.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAUYZs7ZQ35IOdXPXek8nY7U0iNGftwLD0"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "225169726524-8jh9toa4t4sonqkg09vql4kprs6kg47k.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
