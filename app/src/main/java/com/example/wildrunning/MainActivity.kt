@@ -33,25 +33,27 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
         initNavigationView()
     }
 
-    private fun initToolBar(){
+    private fun initToolBar() {
         val toolbar: androidx.appcompat.widget.Toolbar = findViewById(R.id.toolbar_main)
         setSupportActionBar(toolbar)
 
         drawer = findViewById(R.id.drawer_layout)
         val toggle = ActionBarDrawerToggle(
             this, drawer, toolbar, R.string.bar_title,
-            R.string.navigation_drawer_close)
+            R.string.navigation_drawer_close
+        )
 
         drawer.addDrawerListener(toggle)
 
         toggle.syncState()
     }
 
-    private fun initNavigationView(){
+    private fun initNavigationView() {
         var navigationView: NavigationView = findViewById(R.id.nav_view)
         navigationView.setNavigationItemSelectedListener(this)
 
-        var headerView: View = LayoutInflater.from(this).inflate(R.layout.nav_header_main, navigationView, false)
+        var headerView: View =
+            LayoutInflater.from(this).inflate(R.layout.nav_header_main, navigationView, false)
         navigationView.removeHeaderView(headerView)
         navigationView.addHeaderView(headerView)
 
@@ -78,9 +80,10 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
             }
         }
     }
+
     override fun onNavigationItemSelected(item: MenuItem): Boolean {
 
-        when (item.itemId){
+        when (item.itemId) {
             R.id.nav_item_record -> callRecordActivity()
             R.id.nav_item_signout -> signOut()
         }
@@ -89,10 +92,19 @@ class MainActivity : AppCompatActivity(), NavigationView.OnNavigationItemSelecte
 
         return true
     }
-    private fun callRecordActivity(){
-        val intent = Intent (this,RecordActivity::class.java)
+
+    private fun callRecordActivity() {
+        val intent = Intent(this, RecordActivity::class.java)
         startActivity(intent)
     }
 
+    override fun onBackPressed() {
+        //super.onBackPressed()
 
+        if (drawer.isDrawerOpen(GravityCompat.START))
+            drawer.closeDrawer(GravityCompat.START)
+        else
+            signOut()
+
+    }
 }
